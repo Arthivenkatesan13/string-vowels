@@ -1,0 +1,67 @@
+In the mystical domain of Voweloria, an ancient prophecy speaks of a celestial journey called the "Vowel Voyage."
+As a chosen voyager, you are entrusted with the task of counting the ethereal vowels that grace the words of this enchanted land. 
+Armed with the Vowel Seeker, a magical device bestowed upon you by the Vowel Elders, embark on 
+a captivating expedition through the melodious strings of Voweloria.
+
+Task:
+
+Write a program to partake in the Vowel Voyage, using the mystical powers of the Vowel Seeker to count the number 
+of vowels in a given string. However, the challenge lies in achieving this linguistic feat without 
+relying on conventional string library functions.
+
+Input Format
+
+Present the Vowel Seeker with a mesmerizing string from the enchanting lexicon of Voweloria.
+
+Constraints
+
+Null
+
+Output Format
+
+Receive a celestial proclamation, disclosing the number of vowels discovered during the Vowel Voyage.
+
+Sample Input 0
+
+Harmony
+Sample Output 0
+
+Vowel Voyage Completed! Number of vowels: 2
+Sample Input 1
+
+Welcome
+Sample Output 1
+
+Vowel Voyage Triumph! Number of vowels: 3
+Sample Input 2
+
+Enchantment
+Sample Output 2
+
+Vowel Voyage Completed! Number of vowels: 3
+Sample Input 3
+
+Ethereal
+Sample Output 3
+
+Vowel Voyage Completed! Number of vowels: 4
+
+program:
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s= new Scanner(System.in);
+        String str = s.nextLine().toLowerCase();
+        int vow = 0;
+        for (int i = 0; i < str.length(); i++) {
+            char cur = str.charAt(i);
+            if (cur == 'a' || cur == 'e' || cur == 'i' || cur == 'o' || cur == 'u') {
+                vow++;
+            }
+        }
+        System.out.println("Vowel Voyage Completed! Number of vowels: " + vow);
+    }
+}
